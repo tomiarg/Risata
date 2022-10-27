@@ -8,12 +8,14 @@ export function NavBar() {
       <>
       <nav className="NavBar">
           <ul className="lista">
-            <Link to="/">Inicio</Link>
-            <Link to="/contacto">contacto</Link>
-            <Link to="/productos">productos</Link>
+            <Link className="linkNav" to="/">Inicio</Link>
+            <Link className="linkNav" to="/contacto">contacto</Link>
+            <Link className="linkNav" to="/productos">productos</Link>
           </ul>
           <img src={ImagenLogo} alt="logo" className="logo"/>
-          <CartWidget/>
+          <Link className="linkCart" to="/cart">
+            <CartWidget/>
+          </Link>
       </nav>
       </>
      

@@ -10,17 +10,19 @@
 }
 .logo{
     width: 400px;
-    margin-right: 15%;
+    margin-right: 13%;
 }
 .lista{
     list-style: none;
     display: flex;
     flex-direction: row;
 }
-.lista li{
+.linkNav{
+    margin-top: 15px;
     margin-right: 9px;
-}
-.lista li a{
     text-decoration: none;
     color: white;
+}
+.linkCart{
+    margin-top: 15px;
 }

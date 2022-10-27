@@ -1,0 +1,11 @@
+.detalleProd{
+    display: flex;
+    justify-content: space-around;
+}
+.ImagenDetail{
+    width: 500px;
+}
+.textoDetalle{
+    width: 45%;
+    border: black 1px solid;
+}

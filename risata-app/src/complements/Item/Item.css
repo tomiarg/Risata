@@ -1,8 +1,15 @@
 .imagenItem{
     width: 10rem;
     height: 10rem;
+    border-top-left-radius: 35%;
+    border-top-right-radius:35%;
+}
+.btnAgregar{
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius:35%;
 }
 .ContenedorItem{
     border:solid black 1px;
+    border-radius: 35%;
     margin: 5px;
 }
