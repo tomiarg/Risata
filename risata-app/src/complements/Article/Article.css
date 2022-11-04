@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+.articleFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Creepster', cursive;
+    background-image: url("../assets/park.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+
+}
+.imagenArticle{
+    width: 400px !important;
+    height: 400px;
+
+}

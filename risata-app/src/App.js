@@ -5,6 +5,7 @@ import { ItemDetailContainer } from "./complements/ItemDetailContainer/ItemDetai
 import './App.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import { CartProvider } from "./context/CartContext";
+import { Footer } from "./complements/Footer/Footer";
 
 
 
@@ -16,11 +17,11 @@ function App() {
         <NavBar/>    
         <Routes>
          <Route path="/" element={<ItemListContainer/>}/>  
-         <Route path="/category/:categoryId" element= {<ItemListContainer/>}/>
-         <Route path="/item/:id" element={<ItemDetailContainer/ >}/>
+         <Route path="/category/:categoriaId" element= {<ItemListContainer/>}/>
+         <Route path="/item/:id" element={<ItemDetailContainer/>}/>
          <Route path= "/cart" element={<CartContainer/>}/>
         </Routes>
-        <footer>datos legales</footer>
+        <Footer/>
       </div>
      </BrowserRouter>
     </CartProvider>

@@ -1,0 +1,8 @@
+.footerStyle{
+    height: 150px;
+    background: rgb(199,31,46);
+    background: linear-gradient(0deg, rgba(199,31,46,1) 0%, rgba(0,0,0,1) 76%, #171c36 100%, #00d4ff 100%);
+    display: flex;
+    flex-direction: column-reverse;    
+    align-items: center;
+}

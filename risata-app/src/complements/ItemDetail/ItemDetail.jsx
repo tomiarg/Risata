@@ -13,13 +13,13 @@ export const ItemDetail = ({itemProduct}) =>{
         <div className="detalleProd">
             <div className="textoDetalle">
               <img src={itemProduct.image} alt={itemProduct.name} className="ImagenDetail"/>
-              <h4>{itemProduct.name}</h4>
-              <h5>{itemProduct.price}</h5>
-              <ItemCount stock= {5} initial={1} onAdd={agregarProducto}/>
+
             </div>
-            <div className="textoDetalle">
-                <h4>detalle</h4>
-                <h5>{itemProduct.description}</h5>
+            <div className="textoDetalle2">
+                <h4>{itemProduct.name}</h4>
+                <h5>$ {itemProduct.price}</h5>
+                <p>{itemProduct.description}</p>                
+               <ItemCount stock= {5} initial={1} onAdd={agregarProducto}/>
             </div>
         </div>
 

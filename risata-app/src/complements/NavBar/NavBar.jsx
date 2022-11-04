@@ -9,8 +9,10 @@ export function NavBar() {
       <nav className="NavBar">
           <ul className="lista">
             <Link className="linkNav" to="/">Inicio</Link>
-            <Link className="linkNav" to="/contacto">contacto</Link>
-            <Link className="linkNav" to="/productos">productos</Link>
+            <Link className="linkNav" to='/category/Pizza'>Pizza</Link>
+            <Link className="linkNav" to="/category/Bebida">Bebida</Link>
+            <Link className="linkNav" to="/category/DIP">DIP</Link>
+            <Link className="linkNav" to="/category/Postre">Postre</Link>
           </ul>
           <img src={ImagenLogo} alt="logo" className="logo"/>
           <Link className="linkCart" to="/cart">

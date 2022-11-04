@@ -43,8 +43,10 @@ export const CartProvider =({children}) =>{
         const borrarProd = productosCarrito.filter((element)=> element.id !==id);
         setProductosCarrito(borrarProd)
     }
+    const eliminarTodo = () => setProductosCarrito([]);
+
     return(
-        <CartContext.Provider value={{productosCarrito, addProduct, totalApagar, CantidadProd, eliminarItem}}>
+        <CartContext.Provider value={{productosCarrito, addProduct, totalApagar, CantidadProd, eliminarItem,eliminarTodo}}>
             {children}
         </CartContext.Provider>
     )

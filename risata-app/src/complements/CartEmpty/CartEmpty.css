@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+.Aliens{
+    margin:0 auto;
+    width:400px;
+    background-image: url(../assets/aliens.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-bottom: 15px;
+}
+.pWhite{
+    color: white;
+    background-color: black;
+    font-family: 'Creepster', cursive;
+}

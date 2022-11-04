@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+.agregarRestar{
+    width: 35px;
+    background-color: aqua; 
+    font-family: 'Creepster', cursive;  
+
+}
+.comprarComprar{
+    border: solid 1px black;
+    width: 25px;
+    font-family: 'Creepster', cursive;  
+}
+.masMenos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.agregarCarro{
+    width: 100px;
+    background-color: aqua; 
+    font-family: 'Creepster', cursive;  
+    margin-top: 10px
+
+}

@@ -2,5 +2,6 @@
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: lightgrey;
+    background: linear-gradient(0deg, rgba(12,15,28,1) 0%, rgba(14,130,177,1) 76%);
+
 }
