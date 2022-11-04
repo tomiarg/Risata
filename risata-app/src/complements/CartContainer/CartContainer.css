@@ -1,0 +1,25 @@
+.todoForm{
+    width: 100%;
+    display: flex;
+    word-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.productoSel{
+    border:1px solid black;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgCartc{
+    width: 25%;
+}
+.formEnv{
+    border:1px solid black;
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

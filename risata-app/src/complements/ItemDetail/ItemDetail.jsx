@@ -18,7 +18,7 @@ export const ItemDetail = ({itemProduct}) =>{
             <div className="textoDetalle2">
                 <h4>{itemProduct.name}</h4>
                 <h5>$ {itemProduct.price}</h5>
-                <p>{itemProduct.description}</p>                
+                <p className="parrafDetail">{itemProduct.description}</p>                
                <ItemCount stock= {5} initial={1} onAdd={agregarProducto}/>
             </div>
         </div>

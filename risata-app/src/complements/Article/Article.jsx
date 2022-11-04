@@ -4,7 +4,6 @@ import "../Article/Article.css"
 export const Article = () =>{
     return (
         <article className="articleFlex">
-            <h1>RISATA</h1>
             <img src={RisataRemove} alt="pizza" className="imagenArticle"/>
             <p>hola</p>
             <p>nosotros somos</p>

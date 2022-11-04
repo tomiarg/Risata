@@ -4,6 +4,7 @@ import {dataBase} from "../../utils/firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { CartEmpty } from "../CartEmpty/CartEmpty";
 import Swal from "sweetalert2";
+import "../CartContainer/CartContainer.css"
 
 export const CartContainer = () =>{
     const value = useContext(CartContext);
@@ -53,30 +54,33 @@ export const CartContainer = () =>{
                 <CartEmpty/>
                 
                 :
-                <div>
+                <div className="todoForm">
                    {                   
                     productosCarrito.map((producto)=>( 
-                        <div>
+                        <div className="productoSel">
                             <h3>{producto.name}</h3>
                             <p>{producto.quantity}</p>   
                             <p>{producto.price * producto.quantity}</p>     
-                            <p>{producto.quantityPrice}</p>    
+                            <p>{producto.quantityPrice}</p> 
+                            <img src={producto.image} alt="prod" className="imgCartc"/>   
                             <button onClick={()=>eliminarItem(producto.id)}>eliminar Producto</button>                
                         </div>         
                     ))                      
                    }
-            
-                 <h3>{totalApagar()}</h3>
-                 <h2>{CantidadProd}</h2>
+                <div className="formEnv">            
+                 <h5>total a pagar: $   {totalApagar()}</h5>
+                 <h5>cantidad de productos: {CantidadProd()}</h5>
                  <form onSubmit={sendOrder}>
-                <label> nombre</label>
-                <input type="text" placeholder="nombre" />
-                <label>teléfono</label>
-                <input type="tel" placeholder="teléfono" />
-                <label>correo </label>
-                <input type="email" placeholder="ingrese su email"/>
-                <button type="submit">enviar orden</button>
-            </form>
+                   <label> nombre</label>
+                   <input type="text" placeholder="nombre" />
+                   <label>teléfono</label>
+                   <input type="tel" placeholder="teléfono" />
+                   <label>correo </label>
+                   <input type="email" placeholder="ingrese su email"/>
+                   <button type="submit">enviar orden</button>
+                </form>
+                </div>
+ 
             </div>
 
             }
