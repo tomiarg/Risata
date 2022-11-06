@@ -1,15 +1,18 @@
 .todoForm{
+    height: 100%;
     width: 100%;
     display: flex;
     word-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
     
 }
 .productoSel{
     border:1px solid black;    
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 .imgCartc{
@@ -18,7 +21,7 @@
 .formEnv{
     border:1px solid black;
     width: 50%;
-    height: 400px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

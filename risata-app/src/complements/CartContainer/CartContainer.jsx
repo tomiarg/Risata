@@ -55,34 +55,32 @@ export const CartContainer = () =>{
                 
                 :
                 <div className="todoForm">
-                   {                   
+                    <div>
+                   {                  
                     productosCarrito.map((producto)=>( 
                         <div className="productoSel">
-                            <h3>{producto.name}</h3>
-                            <p>{producto.quantity}</p>   
-                            <p>{producto.price * producto.quantity}</p>     
-                            <p>{producto.quantityPrice}</p> 
-                            <img src={producto.image} alt="prod" className="imgCartc"/>   
-                            <button onClick={()=>eliminarItem(producto.id)}>eliminar Producto</button>                
+                            <img src={producto.image} alt="prod" className="imgCartc"/>
+                            <div>
+                              <h3>{producto.name}</h3>
+                              <p>cantidad: <span>{producto.quantity}</span></p>    
+                              <p>precio total: $ <span> {producto.quantityPrice}</span></p>                                
+                              <button onClick={()=>eliminarItem(producto.id)}>eliminar Producto</button>                
+                            </div>
                         </div>         
                     ))                      
                    }
+                   </div>
                 <div className="formEnv">            
-                 <h5>total a pagar: $   {totalApagar()}</h5>
-                 <h5>cantidad de productos: {CantidadProd()}</h5>
-                 <form onSubmit={sendOrder}>
-                   <label> nombre</label>
-                   <input type="text" placeholder="nombre" />
-                   <label>teléfono</label>
-                   <input type="tel" placeholder="teléfono" />
-                   <label>correo </label>
-                   <input type="email" placeholder="ingrese su email"/>
+                   <h5>total a pagar: $   {totalApagar()}</h5>
+                   <h5>cantidad de productos: {CantidadProd()}</h5>
+                    <form onSubmit={sendOrder}>
+                        <p> nombre</p><span><input type="text" placeholder="nombre" /></span>                   
+                        <p>teléfono</p><span><input type="tel" placeholder="teléfono" /></span>                   
+                        <p>correo </p><span><input type="email" placeholder="ingrese su email"/></span>         
+                    </form>
                    <button type="submit">enviar orden</button>
-                </form>
-                </div>
- 
+                </div> 
             </div>
-
             }
             
         </div>
