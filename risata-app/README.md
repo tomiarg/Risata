@@ -1,12 +1,35 @@
-# Getting Started with Create React App
+# Mi primer proyecto con React
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Proyecto de un E-commerce para una Pizzería:
+
+!(/complements/assets/logo.png)
 
 In the project directory, you can run:
 
-### `npm start`
+### profesor: Freddy
+
+Comisión 38120
+
+### dependencias:
+
+"@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.2.2",
+    "firebase": "^9.13.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.2",
+    "react-scripts": "5.0.1",
+    "sweetalert2": "^11.6.5",
+    "web-vitals": "^2.1.4"
+
+### para correr el proyecto: "npm start":
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
