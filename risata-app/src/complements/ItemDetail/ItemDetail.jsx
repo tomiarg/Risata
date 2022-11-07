@@ -2,12 +2,19 @@ import { ItemCount } from "../ItemCount/ItemCount";
 import { useContext } from "react";
 import "../ItemDetail/ItemDetail.css";
 import { CartContext } from "../../context/CartContext";
+import Swal from "sweetalert2";
 
 export const ItemDetail = ({itemProduct}) =>{
     const {addProduct} = useContext(CartContext);
     const agregarProducto= (quantity)=>{
-        console.log(quantity);
         addProduct(itemProduct, quantity);
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'agregaste ' + quantity + ' de ' + itemProduct.name,
+            showConfirmButton: false,
+            timer: 2000
+          })
     }
     return(
         <div className="detalleProd">

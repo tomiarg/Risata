@@ -10,7 +10,7 @@ export const Article = () =>{
             <p>la pizzería extraterrestre</p>
             <p>tenes gansa de conocernos?</p>
             <p>los marcianos nos eligieron por</p>
-            <a href="">esto</a>
+            <a href="www.natgeo.com" target="_blank">esto</a>
         </article>
     )
 }

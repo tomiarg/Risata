@@ -1,4 +1,4 @@
-import { useEffect, useContext, useState } from "react";
+import {  useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import {dataBase} from "../../utils/firebase";
 import { collection, addDoc } from "firebase/firestore";
@@ -9,8 +9,8 @@ import "../CartContainer/CartContainer.css"
 export const CartContainer = () =>{
     const value = useContext(CartContext);
     const {productosCarrito, totalApagar, CantidadProd, eliminarItem, eliminarTodo} = value;
-    const {compraId, setCompraId} = useState("");
-    const {cantidad, setCantidad} = useState(true);
+    const [compras, setCompras] = useState("")
+
 
    
 
@@ -28,15 +28,15 @@ export const CartContainer = () =>{
         }
         const queryRef = collection(dataBase,"compras");
         addDoc(queryRef, compra).then((resultado)=>{
+            setCompras(resultado.id);
+            console.log(resultado.id)
             Swal.fire({
                 icon: 'success',
                 title: 'número de seguimiento: ' + resultado.id,
                 text: 'Muchas Gracias por confiar!',
               });
-              eliminarTodo();                     
-           })    
-          
-          
+              eliminarTodo();                    
+           })             
                 
     }
 
@@ -73,12 +73,15 @@ export const CartContainer = () =>{
                 <div className="formEnv">            
                    <h5>total a pagar: $   {totalApagar()}</h5>
                    <h5>cantidad de productos: {CantidadProd()}</h5>
-                    <form onSubmit={sendOrder}>
+                    <form onSubmit={ sendOrder }>
                         <p> nombre</p><span><input type="text" placeholder="nombre" /></span>                   
                         <p>teléfono</p><span><input type="tel" placeholder="teléfono" /></span>                   
-                        <p>correo </p><span><input type="email" placeholder="ingrese su email"/></span>         
+                        <p>correo </p><span><input type="email" placeholder="ingrese su email"/></span> 
+                        <div>
+                           <button type="submit">enviar orden</button>                                
+                        </div>                           
                     </form>
-                   <button type="submit">enviar orden</button>
+                   
                 </div> 
             </div>
             }

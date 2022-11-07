@@ -27,3 +27,9 @@
 .linkCart{
     margin-top: 15px;
 }
+.notSelected{
+    color:white;
+}
+.selected{
+    color: lawngreen;
+}

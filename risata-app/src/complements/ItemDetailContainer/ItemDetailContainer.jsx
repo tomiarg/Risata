@@ -1,5 +1,4 @@
-import { useParams } from "react-router-dom"
-import { baseDatos } from "../baseDatos/baseDatos";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { dataBase } from "../../utils/firebase";

@@ -1,5 +1,4 @@
 import { ItemList } from "../ItemList/ItemList";
-import { baseDatos } from "../baseDatos/baseDatos";
 import "../ItemListContainer/ItemListContainer.css";
 import { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
@@ -16,12 +15,6 @@ export const ItemListContainer = () =>{
     const [loading, setLoading] = useState(true)
 
 
-    const promesa = new Promise ((resolve, reject)=>{
-        setTimeout(() => {
-            resolve(baseDatos)            
-        }, 2000);
-        
-    })
     useEffect(()=>{
         const queryRef = categoriaId ? query(collection(dataBase,"items"), where("category", "==", categoriaId)) : collection(dataBase,"items")
         getDocs(queryRef).then((response)=>{
